@@ -1,0 +1,15 @@
+{
+  "name": "cetv",
+  "displayName": "CETV Campaigns",
+  "version": "0.1.0",
+  "description": "Advertise on CETV's network of digital screens in break rooms and venues: pick a package, upload your ad, pay by invoice, and track plays — all from a conversation.",
+  "author": {
+    "name": "CETV Now",
+    "email": "ads@cetvnow.com",
+    "url": "https://cetvnow.com"
+  },
+  "homepage": "https://cetvnow.com",
+  "repository": "https://github.com/CETV-Now/claude-plugins",
+  "license": "UNLICENSED",
+  "keywords": ["advertising", "digital-signage", "dooh", "marketing", "small-business"]
+}
