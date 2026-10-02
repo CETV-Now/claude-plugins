@@ -11,7 +11,7 @@ Advertise on CETV's network of digital screens in break rooms and venues, from a
 
 | Component | What it does |
 |---|---|
-| **CETV connector** (`.mcp.json`) | Connects Claude to `https://mammoth-campaigns-service.fly.dev/mcp`. You sign in with your email (a one-time code) the first time it's used. |
+| **CETV connector** (`.mcp.json`) | Connects Claude to `https://mcp.cetvnow.com/mcp`. You sign in with your email (a one-time code) the first time it's used. |
 | **`new-campaign` skill** | Walks you through package, start date, business details, uploading your ad, confirmation, and payment. |
 | **`campaign-report` skill** | Shows status, plays delivered vs. your package, daily plays, and payment status. |
 

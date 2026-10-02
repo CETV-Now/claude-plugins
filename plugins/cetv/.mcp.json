@@ -2,7 +2,7 @@
   "mcpServers": {
     "cetv": {
       "type": "http",
-      "url": "https://mammoth-campaigns-service.fly.dev/mcp"
+      "url": "https://mcp.cetvnow.com/mcp"
     }
   }
 }
