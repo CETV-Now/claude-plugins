@@ -32,6 +32,17 @@ Then start a session and say "I want to advertise on CETV" (or run `/cetv:new-ca
 
 Open **Customize → Plugins → Add marketplace**, enter `CETV-Now/claude-plugins`, then install **CETV Campaigns** and connect it from the plugin's **Connectors** tab.
 
+## Data and privacy
+
+The plugin runs nothing on your computer. It adds two skills (instructions for Claude) and one remote MCP server, `https://mcp.cetvnow.com/mcp`, operated by CETV Now. When you use it:
+
+- You sign in to your CETV advertiser account with your email address (Clerk handles sign-in).
+- Claude sends the CETV server only what each request needs, such as the package, start date, campaign name, and business name. It doesn't send your conversation, chat history, or files.
+- Your ad image is uploaded through a private, single-use upload link (or, in Claude Code, straight from the file you choose) to CETV's storage, so it can be shown on CETV screens.
+- Invoices are sent and paid through Stripe. Payment happens on Stripe's page; Claude never sees your card details.
+
+Details: [documentation](https://mcp.cetvnow.com/docs) · [privacy notice](https://mcp.cetvnow.com/privacy)
+
 ## Support
 
-ads@cetvnow.com · https://cetvnow.com
+info@cetvnow.com · https://cetvnow.com
