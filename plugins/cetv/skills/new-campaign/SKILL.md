@@ -24,10 +24,11 @@ Collect:
 
 ## 3. The ad (creative)
 
-The ad is a single landscape **JPG or PNG** that the user provides; screens are 1920×1080, so a 16:9 image looks best. Upload it:
+The ad is a single landscape **JPG or PNG** that the user provides; screens are 1920×1080, so a 16:9 image looks best.
 
-- In a chat app (claude.ai, Claude desktop or mobile, Cowork): call `create_upload_link`, give them the link, and tell them it works once and expires in 30 minutes. When they say they're done, call `check_upload`. If the status isn't `uploaded` yet, ask them to finish on the page; if it's `expired`, make a new link.
-- In Claude Code with the file on disk: call `get_upload_url` with the filename and `image/png` or `image/jpeg`, upload with the returned `curl` command (substituting the real path), and keep the returned `creative_url`. Check the file type first.
+**Use an upload link by default, in every app (Claude Code included):** call `create_upload_link`, give them the link, and tell them it works once and expires in 30 minutes. When they say they're done, call `check_upload`. If the status isn't `uploaded` yet, ask them to finish on the page; if it's `expired`, make a new link.
+
+Don't ask for a file path. Only if the user has already given you the path of the image on their computer, and you can run shell commands (Claude Code), upload it directly instead: call `get_upload_url` with the filename and `image/png` or `image/jpeg`, upload with the returned `curl` command (substituting the real path), and keep the returned `creative_url`. Check the file type first.
 
 If they don't have an ad image yet, let them know they'll need one (a JPG or PNG, ideally 1920×1080) and can come back once it's ready.
 
