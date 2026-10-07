@@ -38,8 +38,8 @@ The plugin runs nothing on your computer. It adds two skills (instructions for C
 
 - You sign in to your CETV advertiser account with your email address (Clerk handles sign-in).
 - Claude sends the CETV server only what each request needs, such as the package, start date, campaign name, and business name. It doesn't send your conversation, chat history, or files.
-- Your ad image is uploaded through a private, single-use upload link (or, in Claude Code, straight from the file you choose) to CETV's storage, so it can be shown on CETV screens.
-- Invoices are sent and paid through Stripe. Payment happens on Stripe's page; Claude never sees your card details.
+- Your ad image is uploaded to CETV's Amazon S3 storage (`cetv-now.s3.us-west-2.amazonaws.com`) so it can be shown on CETV screens. Normally you upload it yourself through a private, single-use upload link. In Claude Code, only if you give Claude the path of an image on your computer, the `new-campaign` skill uploads that one file with `curl` to a short-lived (5-minute) upload URL that the CETV server issues for it. No other file is read or sent.
+- Invoices are created by the CETV server through Stripe and emailed to you. You pay on Stripe's payment page in your browser; the plugin never contacts Stripe and Claude never sees your card details.
 
 Details: [documentation](https://mcp.cetvnow.com/docs) · [privacy notice](https://mcp.cetvnow.com/privacy)
 
